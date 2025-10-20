@@ -8,8 +8,10 @@ import { throttle } from '../utils/throttle.js';
   if (!header || !nav || !toggle || !menu) return;
 
   function setSticky() {
-    const isSticky = window.scrollY > 8;
-    nav.classList.toggle('is-sticky', isSticky);
+    // Force dark header as baseline
+    nav.classList.toggle('is-sticky', window.scrollY > 8);
+    header.classList.add('header--solid');
+    header.classList.remove('header--transparent');
   }
   setSticky();
   window.addEventListener('scroll', throttle(setSticky, 100), {

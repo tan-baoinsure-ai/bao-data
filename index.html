@@ -4,22 +4,64 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Polar Analytics — Replica</title>
-    <meta name="description" content="1:1 replica of Polar Analytics built with HTML, CSS, and vanilla JS." />
+    <title>BAO Analytics</title>
+    <meta name="description" content="BAO Platform" />
 
     <!-- Preload fonts (placeholders) -->
-    <link rel="preload" href="assets/fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/Satoshi-Variable.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- <link
+      rel="preload"
+      href="assets/fonts/Inter-Variable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin />
+    <link
+      rel="preload"
+      href="assets/fonts/Satoshi-Variable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin /> -->
 
     <!-- Critical CSS (minimal to avoid FOUC) -->
     <style>
-      :root { --max-width: 1280px; }
-      .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-      .container{width:min(100% - 2rem, var(--max-width));margin-inline:auto}
-      body{margin:0;font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
-      header{position:sticky;top:0;background:#fff;backdrop-filter:saturate(180%) blur(8px);z-index:100}
-      nav{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0}
-      main{display:block}
+      :root {
+        --max-width: 1280px;
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      .container {
+        width: min(100% - 2rem, var(--max-width));
+        margin-inline: auto;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        background: #0b0b24;
+        backdrop-filter: saturate(180%) blur(8px);
+        z-index: 100;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 0;
+      }
+      main {
+        display: block;
+      }
     </style>
 
     <!-- Full CSS -->
@@ -32,22 +74,72 @@
   <body>
     <a class="sr-only" href="#main">Skip to content</a>
 
-    <header id="site-header" role="banner" aria-label="Primary">
+    <header
+      id="site-header"
+      class="header--solid"
+      role="banner"
+      aria-label="Primary">
       <div class="container">
         <nav class="nav" aria-label="Main">
           <a class="nav__brand" href="/" aria-label="Home">
-            <img src="assets/images/logo-placeholder.svg" alt="Polar Analytics" width="120" height="28" />
+            <img
+              src="assets/images/logo-bao-insurance.svg"
+              alt="BAO Solution.ai"
+              width="150"
+              height="50" />
           </a>
-          <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu">
+          <button
+            class="nav__toggle"
+            aria-expanded="false"
+            aria-controls="nav-menu">
             <span class="sr-only">Toggle menu</span>
             <!-- Icon -->
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true">
+              <path
+                d="M4 6h16M4 12h16M4 18h16"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round" />
+            </svg>
           </button>
           <ul id="nav-menu" class="nav__menu" role="menubar">
-            <li role="none"><a role="menuitem" href="#features">Features</a></li>
-            <li role="none"><a role="menuitem" href="#stories">Stories</a></li>
-            <li role="none"><a role="menuitem" href="#pricing">Pricing</a></li>
-            <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+            <li role="none">
+              <a role="menuitem" class="nav__link" href="#platform">Platform</a>
+            </li>
+            <li role="none">
+              <a role="menuitem" class="nav__link" href="#solutions"
+                >Solutions</a
+              >
+            </li>
+            <li role="none">
+              <a role="menuitem" class="nav__link" href="#resources"
+                >Resources</a
+              >
+            </li>
+            <li role="none">
+              <a role="menuitem" class="nav__link" href="#pricing">Pricing</a>
+            </li>
+            <li role="none">
+              <a
+                role="menuitem"
+                class="nav__link nav__link--muted"
+                href="#login"
+                >Log in</a
+              >
+            </li>
+            <li role="none">
+              <a
+                role="menuitem"
+                class="button button--primary nav__cta"
+                href="#demo"
+                >Book a demo</a
+              >
+            </li>
           </ul>
         </nav>
       </div>
@@ -58,30 +150,222 @@
       <section id="hero" class="hero" aria-labelledby="hero-title">
         <div class="container">
           <div class="hero__content">
-            <h1 id="hero-title" class="hero__title">The operating system for modern ecommerce analytics</h1>
-            <p class="hero__subtitle">Replica build for learning. No real data or assets.</p>
+            <h1 id="hero-title" class="hero__title">
+              The operating system for modern ecommerce analytics
+            </h1>
+            <p class="hero__subtitle">
+              The all‑in‑one data stack for insights, activations, and AI
+              agents.
+            </p>
             <div class="hero__actions">
               <a class="button button--primary" href="#demo">Try the demo</a>
-              <a class="button button--ghost" href="#features">Explore features</a>
+              <a class="button button--ghost" href="#features"
+                >Explore features</a
+              >
             </div>
           </div>
           <figure class="hero__media">
-            <img src="assets/images/hero-placeholder.svg" alt="App dashboard preview" width="1200" height="720" />
+            <img
+              src="assets/images/demo-page-image.png"
+              alt="App dashboard preview"
+              width="1200"
+              height="720" />
           </figure>
         </div>
       </section>
 
-      <!-- Trusted Logos -->
-      <section id="logos" class="logos" aria-labelledby="logos-title">
+      <!-- Instant demo split -->
+      <section
+        id="instant-demo"
+        class="instant-demo"
+        aria-labelledby="instant-demo-title">
         <div class="container">
-          <h2 id="logos-title" class="section-title">Trusted by ecommerce brands</h2>
-          <ul class="logos__grid" aria-label="Brand logos">
-            <li><img data-src="assets/images/logo1.svg" alt="Brand 1" width="140" height="40" /></li>
-            <li><img data-src="assets/images/logo2.svg" alt="Brand 2" width="140" height="40" /></li>
-            <li><img data-src="assets/images/logo3.svg" alt="Brand 3" width="140" height="40" /></li>
-            <li><img data-src="assets/images/logo4.svg" alt="Brand 4" width="140" height="40" /></li>
-            <li><img data-src="assets/images/logo5.svg" alt="Brand 5" width="140" height="40" /></li>
-          </ul>
+          <div class="section-head section-head--center">
+            <h2 id="instant-demo-title" class="section-title">
+              Try the instant demo
+            </h2>
+            <p>Test-drive BAO with demo data, no signup or call required.</p>
+          </div>
+          <div class="split">
+            <div class="split__copy">
+              <h3 class="card__title">Open demo app</h3>
+              <p class="card__desc">
+                Experience the BAO interface with preloaded sample data in a
+                safe sandbox.
+              </p>
+              <a
+                class="button button--primary"
+                href="#"
+                style="margin-top: 12px"
+                >Open demo</a
+              >
+            </div>
+            <div class="split__media">
+              <img
+                src="assets/images/demo-page-image.png"
+                alt="Demo preview"
+                width="560"
+                height="360" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI Feed / MCP -->
+      <section id="ai-feed" class="ai-feed" aria-labelledby="ai-feed-title">
+        <div class="container">
+          <div class="section-head section-head--center">
+            <span class="badge">BAO MCP</span>
+            <h2 id="ai-feed-title" class="section-title">
+              Feed clean data to AI anywhere
+            </h2>
+          </div>
+          <div class="cards__grid cards__grid--4">
+            <article class="card">
+              <h3 class="card__title">Paid Media Health Check</h3>
+              <p class="card__desc">
+                Evaluate last 7-day trends and uncover quick wins.
+              </p>
+              <div class="card__meta">
+                <span class="chip">Claude</span>
+              </div>
+            </article>
+            <article class="card icon-dollar">
+              <h3 class="card__title">Profitability deep‑dive</h3>
+              <p class="card__desc">
+                Comprehensive margin analysis to guide budget allocation.
+              </p>
+              <div class="card__meta">
+                <span class="chip">Claude</span>
+              </div>
+            </article>
+            <article class="card icon-box">
+              <h3 class="card__title">Inventory optimizer</h3>
+              <p class="card__desc">
+                Spot stock risks early and remove bottlenecks.
+              </p>
+              <div class="card__meta">
+                <span class="chip">Claude</span>
+              </div>
+            </article>
+            <article class="card icon-mail">
+              <h3 class="card__title">Executive summary to Slack/Gmail</h3>
+              <p class="card__desc">
+                Weekly trends and action items delivered to your team.
+              </p>
+              <div class="card__meta">
+                <span class="chip">Slack</span>
+                <span class="chip">Gmail</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Unified platform grid -->
+      <section id="platform" class="platform" aria-labelledby="platform-title">
+        <div class="container">
+          <div class="section-head section-head--center">
+            <h2 id="platform-title" class="section-title">
+              The unified data platform powering omnichannel growth
+            </h2>
+          </div>
+
+          <div class="cluster">
+            <h3 class="cluster__title">Insights</h3>
+            <div class="cards__grid cards__grid--auto">
+              <article class="card card--compact icon-chart">
+                <h4 class="card__title">Business Intelligence</h4>
+                <p class="card__desc">
+                  Turn analytics, alerts, reporting into decisions.
+                </p>
+              </article>
+              <article class="card card--compact icon-test">
+                <h4 class="card__title">Incrementality Testing</h4>
+                <p class="card__desc">
+                  Validate which efforts actually drive sales.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="cluster">
+            <h3 class="cluster__title">Data Activations</h3>
+            <div class="cards__grid cards__grid--auto">
+              <article class="card card--compact icon-mail">
+                <h4 class="card__title">Klaviyo Audiences</h4>
+                <p class="card__desc">
+                  Capture missed events and boost flows revenue.
+                </p>
+              </article>
+              <article class="card card--compact icon-link">
+                <h4 class="card__title">Advertising Signals</h4>
+                <p class="card__desc">
+                  Send 100% conversions to improve targeting.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="cluster">
+            <h3 class="cluster__title">AI Agents</h3>
+            <div class="cards__grid cards__grid--auto">
+              <article class="card card--compact icon-brain">
+                <h4 class="card__title">Data Analyst Agent</h4>
+                <p class="card__desc">Ask and get instant answers.</p>
+              </article>
+              <article class="card card--compact icon-target">
+                <h4 class="card__title">Media Buyer Agent</h4>
+                <p class="card__desc">Cut wasted spend; hit ROAS.</p>
+              </article>
+              <article class="card card--compact icon-mail">
+                <h4 class="card__title">Email Marketer Agent</h4>
+                <p class="card__desc">Increase revenue per subscriber.</p>
+              </article>
+              <article class="card card--compact icon-box">
+                <h4 class="card__title">Inventory Planner Agent</h4>
+                <p class="card__desc">Prevent stockouts and protect margins.</p>
+              </article>
+              <article class="card card--compact icon-bolt">
+                <h4 class="card__title">BAO MCP</h4>
+                <p class="card__desc">Give AI real-time commerce data.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="cluster">
+            <h3 class="cluster__title">The BAO Data Platform includes</h3>
+            <div class="cards__grid cards__grid--auto">
+              <article class="card card--compact icon-database">
+                <h4 class="card__title">Data warehouse</h4>
+                <p class="card__desc">Your own Snowflake instance.</p>
+              </article>
+              <article class="card card--compact icon-plug">
+                <h4 class="card__title">Connectors</h4>
+                <p class="card__desc">
+                  1‑click integrations for major platforms.
+                </p>
+              </article>
+              <article class="card card--compact icon-layers">
+                <h4 class="card__title">Semantic Layer</h4>
+                <p class="card__desc">Pre‑built metrics and dimensions.</p>
+              </article>
+              <article class="card card--compact icon-shield">
+                <h4 class="card__title">Roles & Permissions</h4>
+                <p class="card__desc">Granular access control.</p>
+              </article>
+              <article class="card card--compact icon-cursor">
+                <h4 class="card__title">First‑party pixel</h4>
+                <p class="card__desc">Lifetime ID and cross‑device tracking.</p>
+              </article>
+              <article class="card card--compact icon-sparkles">
+                <h4 class="card__title">BAO AI</h4>
+                <p class="card__desc">
+                  Agents powered by a unique semantic layer.
+                </p>
+              </article>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -93,70 +377,24 @@
             <article class="feature-card">
               <figure class="feature-card__icon" aria-hidden="true"></figure>
               <h3 class="feature-card__title">Unified metrics</h3>
-              <p class="feature-card__desc">Clean, reliable KPIs across channels with no spreadsheets.</p>
+              <p class="feature-card__desc">
+                Clean, reliable KPIs across channels with no spreadsheets.
+              </p>
             </article>
             <article class="feature-card">
               <figure class="feature-card__icon" aria-hidden="true"></figure>
               <h3 class="feature-card__title">Attribution insights</h3>
-              <p class="feature-card__desc">See which channels actually drive revenue and profit.</p>
+              <p class="feature-card__desc">
+                See which channels actually drive revenue and profit.
+              </p>
             </article>
             <article class="feature-card">
               <figure class="feature-card__icon" aria-hidden="true"></figure>
               <h3 class="feature-card__title">Automations</h3>
-              <p class="feature-card__desc">Alerts and reports delivered where your team works.</p>
+              <p class="feature-card__desc">
+                Alerts and reports delivered where your team works.
+              </p>
             </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Stats / Growth Stories -->
-      <section id="stories" class="stories" aria-labelledby="stories-title">
-        <div class="container">
-          <h2 id="stories-title" class="section-title">Growth stories</h2>
-          <div class="stories__stats" role="list">
-            <div class="stat" role="listitem">
-              <div class="stat__num" data-counter="1200" aria-label="1,200+ brands">0</div>
-              <div class="stat__label">Brands</div>
-            </div>
-            <div class="stat" role="listitem">
-              <div class="stat__num" data-counter="45" aria-label="45 integrations">0</div>
-              <div class="stat__label">Integrations</div>
-            </div>
-            <div class="stat" role="listitem">
-              <div class="stat__num" data-counter="99" aria-label="99% uptime">0</div>
-              <div class="stat__label">Uptime</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Carousel (placeholder) -->
-      <section id="carousel" class="carousel" aria-labelledby="carousel-title">
-        <div class="container">
-          <h2 id="carousel-title" class="section-title">What customers say</h2>
-          <div class="carousel__viewport" tabindex="0" aria-roledescription="carousel" aria-label="Testimonials">
-            <div class="carousel__track">
-              <article class="carousel__slide" aria-roledescription="slide" aria-label="1 of 3">
-                <blockquote>
-                  <p>Polar-style insights, re-created.</p>
-                  <footer>— Customer A</footer>
-                </blockquote>
-              </article>
-              <article class="carousel__slide" aria-roledescription="slide" aria-label="2 of 3">
-                <blockquote>
-                  <p>Clean UI, actionable metrics.</p>
-                  <footer>— Customer B</footer>
-                </blockquote>
-              </article>
-              <article class="carousel__slide" aria-roledescription="slide" aria-label="3 of 3">
-                <blockquote>
-                  <p>Exactly what we needed.</p>
-                  <footer>— Customer C</footer>
-                </blockquote>
-              </article>
-            </div>
-            <button class="carousel__prev" aria-label="Previous slide">‹</button>
-            <button class="carousel__next" aria-label="Next slide">›</button>
           </div>
         </div>
       </section>
@@ -168,24 +406,35 @@
           <form class="cta__form" novalidate>
             <div class="field">
               <label for="email">Work email</label>
-              <input id="email" name="email" type="email" required inputmode="email" autocomplete="email" placeholder="you@brand.com" />
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                inputmode="email"
+                autocomplete="email"
+                placeholder="you@brand.com" />
               <span class="field__error" role="alert" aria-live="polite"></span>
             </div>
-            <button class="button button--primary" type="submit">Get demo</button>
+            <button class="button button--primary" type="submit">
+              Get demo
+            </button>
             <p class="form__status" role="status" aria-live="polite" hidden></p>
           </form>
         </div>
       </section>
-
     </main>
 
     <footer id="contact" class="footer" role="contentinfo">
       <div class="container footer__grid">
         <section class="footer__brand">
           <a class="nav__brand" href="/" aria-label="Home">
-            <img src="assets/images/logo-placeholder.svg" alt="Polar Analytics" width="120" height="28" />
+            <img
+              src="assets/images/logo-bao-insurance.svg"
+              alt="BAO Solution.ai"
+              width="150"
+              height="50" />
           </a>
-          <p>Replica project for educational purposes.</p>
         </section>
         <nav class="footer__links" aria-label="Footer">
           <div class="footer__col">
@@ -213,11 +462,20 @@
         </nav>
       </div>
       <div class="container footer__bottom">
-        <p>© <span id="year"></span> Replica of Polar Analytics</p>
-        <ul class="social" aria-label="Social links">
-          <li><a href="#" aria-label="Twitter">Tw</a></li>
-          <li><a href="#" aria-label="LinkedIn">In</a></li>
-          <li><a href="#" aria-label="GitHub">Gh</a></li>
+        <div class="footer__legal">
+          <p class="footer__legal-main">
+            © 2025 BAOSolutions.ai. All rights reserved.
+          </p>
+        </div>
+        <div class="footer__legal">
+          <p>
+            Tax ID: 0319153177 • 55 Quach Giai Street, Cat Lai Ward, Ho Chi Minh
+            City, Vietnam
+          </p>
+        </div>
+        <ul class="footer__policies" aria-label="Legal links">
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
         </ul>
       </div>
     </footer>
@@ -226,9 +484,6 @@
     <script defer src="js/utils/observer.js"></script>
     <script type="module" src="js/components/nav.js"></script>
     <script type="module" src="js/components/hero.js"></script>
-    <script type="module" src="js/components/carousel.js"></script>
     <script type="module" src="js/main.js"></script>
   </body>
-  </html>
-
-
+</html>
