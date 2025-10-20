@@ -50,4 +50,4 @@ npx http-server -p 8080 .
 python -m http.server 8080
 ```
 
-Then open `http://localhost:8080/bao-connector/`.
+Then open `http://localhost:8080`.
