@@ -1,0 +1,30 @@
+/* =========================
+   Components
+========================= */
+
+.nav.is-sticky {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.hero__title {
+  letter-spacing: -0.02em;
+}
+.hero__subtitle {
+  color: var(--color-muted);
+}
+
+.carousel__slide blockquote {
+  margin: 0;
+  font-size: 1.125rem;
+}
+.carousel__slide footer {
+  color: var(--color-muted);
+  margin-top: 0.5rem;
+}
+
+.footer__title {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}

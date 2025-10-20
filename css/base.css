@@ -1,0 +1,110 @@
+:root {
+  --color-primary: #0b0b24;
+  --color-accent: #485aff;
+  --color-bg: #ffffff;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --font-body: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  --font-heading: 'Satoshi', var(--font-body);
+  --max-width: 1280px;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-s: 0.75rem;
+  --space-m: 1rem;
+  --space-l: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+}
+
+/* Base reset */
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  color: var(--color-primary);
+  background: var(--color-bg);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font: inherit;
+  cursor: pointer;
+}
+input,
+button {
+  border: 1px solid var(--color-border);
+}
+
+/* Typography scale using clamp */
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  margin: 0 0 var(--space-m);
+  line-height: 1.2;
+}
+h1 {
+  font-size: clamp(2rem, 1.2rem + 2.4vw, 3.5rem);
+}
+h2 {
+  font-size: clamp(1.5rem, 1rem + 1.6vw, 2.25rem);
+}
+h3 {
+  font-size: clamp(1.125rem, 0.9rem + 0.8vw, 1.5rem);
+}
+p {
+  margin: 0 0 var(--space-m);
+  color: var(--color-primary);
+}
+.section-title {
+  margin-bottom: var(--space-xl);
+}
+
+/* Utilities */
+.container {
+  width: min(100% - 2rem, var(--max-width));
+  margin-inline: auto;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+.button--primary {
+  background: var(--color-accent);
+  color: white;
+}
+.button--primary:hover {
+  transform: translateY(-1px);
+}
+.button--ghost {
+  background: transparent;
+  border-color: var(--color-border);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
