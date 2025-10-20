@@ -3,10 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>BAO Solutions — Terms of Service</title>
+    <link rel="preload" href="css/base.css" as="style" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/pages.css" />
     <style>
       main {
         padding: 40px 0;
@@ -43,6 +46,7 @@
     </style>
   </head>
   <body>
+    <!-- Persistent header copied from index.html -->
     <header
       id="site-header"
       class="header--solid"
@@ -54,9 +58,65 @@
             <img
               src="assets/images/logo-bao-insurance.svg"
               alt="BAO Solution.ai"
-              width="150"
+              width="170"
               height="50" />
           </a>
+          <button
+            class="nav__toggle"
+            aria-expanded="false"
+            aria-controls="nav-menu">
+            <span class="sr-only">Toggle menu</span>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true">
+              <path
+                d="M4 6h16M4 12h16M4 18h16"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round" />
+            </svg>
+          </button>
+          <ul id="nav-menu" class="nav__menu" role="menubar">
+            <li role="none">
+              <a role="menuitem" class="nav__link" href="index.html#platform"
+                >Platform</a
+              >
+            </li>
+            <li role="none">
+              <a role="menuitem" class="nav__link" href="index.html#solutions"
+                >Solutions</a
+              >
+            </li>
+            <li role="none">
+              <a role="menuitem" class="nav__link" href="index.html#resources"
+                >Resources</a
+              >
+            </li>
+            <li role="none">
+              <a role="menuitem" class="nav__link" href="index.html#pricing"
+                >Pricing</a
+              >
+            </li>
+            <li role="none">
+              <a
+                role="menuitem"
+                class="nav__link nav__link--muted"
+                href="index.html#login"
+                >Log in</a
+              >
+            </li>
+            <li role="none">
+              <a
+                role="menuitem"
+                class="button button--primary nav__cta"
+                href="index.html#demo"
+                >Book a demo</a
+              >
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
@@ -167,18 +227,64 @@
       </div>
     </main>
 
-    <footer class="footer">
+    <!-- Persistent footer copied from index.html -->
+    <footer id="contact" class="footer" role="contentinfo">
+      <div class="container footer__grid">
+        <section class="footer__brand">
+          <a class="nav__brand" href="/" aria-label="Home">
+            <img
+              src="assets/images/logo-bao-insurance.svg"
+              alt="BAO Solution.ai"
+              width="170"
+              height="50" />
+          </a>
+        </section>
+        <nav class="footer__links" aria-label="Footer">
+          <div class="footer__col">
+            <h3 class="footer__title">Product</h3>
+            <ul>
+              <li><a href="index.html#features">Features</a></li>
+              <li><a href="index.html#pricing">Pricing</a></li>
+              <li><a href="index.html#demo">Demo</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__title">Company</h3>
+            <ul>
+              <li><a href="index.html#stories">Customers</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__title">Resources</h3>
+            <ul>
+              <li><a href="#">Docs</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
       <div class="container footer__bottom">
         <div class="footer__legal">
           <p class="footer__legal-main">
             © 2025 BAOSolutions.ai. All rights reserved.
           </p>
+        </div>
+        <div class="footer__legal">
           <p>
             Tax ID: 0319153177 • 55 Quach Giai Street, Cat Lai Ward, Ho Chi Minh
             City, Vietnam
           </p>
         </div>
+        <ul class="footer__policies" aria-label="Legal links">
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
       </div>
     </footer>
+
+    <script defer src="js/utils/observer.js"></script>
+    <script type="module" src="js/components/nav.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>
